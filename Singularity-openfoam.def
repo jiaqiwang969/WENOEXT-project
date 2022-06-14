@@ -1,0 +1,7 @@
+Bootstrap: docker
+From:  jiaqiknight/wenoext:v1 
+%post
+/bin/mv /bin/sh /bin/sh.original
+/bin/ln -s /bin/bash /bin/sh
+echo ". /home/gitlab/OpenFOAM/OpenFOAM-v2012/etc/bashrc" >> $SINGULARITY_ENVIRONMENT
+
