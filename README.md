@@ -10,3 +10,5 @@ docker build jiaqiknight/openfoam-wenoext:v2 .
 singularity build openfoam-wenoext-v2012.sif Singularity-openfoam.def
 singularity shell openfoam-wenoext-v2012.sif
 ```
+
+### Use Action to dockerhub
