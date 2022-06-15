@@ -136,8 +136,8 @@ WORKDIR $OFINSTDIR
 # && rm -f OpenFOAM-${OFVERSION}.tgz \
 # && rm -f ThirdParty-${OFVERSION}.tgz
 
-RUN git clone https://develop.openfoam.com/Development/openfoam.git OpenFOAM-${VERSION}\
-    && git clone https://develop.openfoam.com/Development/ThirdParty-common.git ThirdParty-${VERSION}
+RUN git clone https://develop.openfoam.com/Development/openfoam.git OpenFOAM-${OFVERSION}\
+    && git clone https://develop.openfoam.com/Development/ThirdParty-common.git ThirdParty-${OFVERSION}
 
 
 
