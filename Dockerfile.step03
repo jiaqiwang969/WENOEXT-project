@@ -21,7 +21,7 @@ RUN apt-get update -qq\
  &&  apt-get -y --no-install-recommends install \
             vim time\
             cron gosu \
-            bc \
+            bc git\
  && apt-get clean all \
  && rm -r /var/lib/apt/lists/*
 
