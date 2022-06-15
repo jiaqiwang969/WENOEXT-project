@@ -221,16 +221,16 @@ RUN cd ${OFINSTDIR}/ThirdParty-${OFVERSION} \
 #Install paraview for graphical postprocessing to be available in the container 
 
 ##Paraview compilation (Adapted alternative instructions from OpenFoamWiki)
-RUN . ${OFBASHRC} \
+#RUN . ${OFBASHRC} \
 #AEG: recomendation in the ThirdParty-xx/README.md:
- && $WM_PROJECT_DIR/wmake/src/Allmake \
- && cd $WM_THIRD_PARTY_DIR \
- && export QT_SELECT=qt5 \
+# && $WM_PROJECT_DIR/wmake/src/Allmake \
+# && cd $WM_THIRD_PARTY_DIR \
+# && export QT_SELECT=qt5 \
 #AEG: makeParaView failing due to bash-isms, changing explicitly to bash:
- && cp makeParaView makeParaView.original \
- && sed -i '\,^#!/bin/sh.*,i#!/bin/bash' makeParaView \
- && sed -i 's,^#!/bin/sh,###!/bin/sh,' makeParaView \
- && ./makeParaView -python -mpi -python-lib /usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0 2>&1 | tee log.makePV
+# && cp makeParaView makeParaView.original \
+# && sed -i '\,^#!/bin/sh.*,i#!/bin/bash' makeParaView \
+# && sed -i 's,^#!/bin/sh,###!/bin/sh,' makeParaView \
+# && ./makeParaView -python -mpi -python-lib /usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0 2>&1 | tee log.makePV
 
 #AEG##...........
 #AEG##Step 5.
