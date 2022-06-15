@@ -203,7 +203,7 @@ RUN cp ${OFBASHRC} ${OFBASHRC}.original \
 #(Additional) Installing cmake-3.12.4 as will be needed later for ADIOS2-2.6.0
 #Following instructions from https://vitux.com/how-to-install-cmake-on-ubuntu-18-04
 ARG CMAKEVER="3.12.4"
-RUN cd ${OFINSTDIR}/ThirdParty} \
+RUN cd ${OFINSTDIR}/ThirdParty \
  && wget https://github.com/Kitware/CMake/releases/download/v${CMAKEVER}/cmake-${CMAKEVER}.tar.gz \
  && tar -zxvf cmake-${CMAKEVER}.tar.gz \
  && cd cmake-${CMAKEVER} \
