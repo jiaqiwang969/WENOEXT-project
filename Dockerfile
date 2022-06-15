@@ -248,7 +248,7 @@ RUN cd ${OFINSTDIR}/ThirdParty \
 RUN . ${OFBASHRC} \
 #AEG: recomendation in the ThirdParty-xx/README.md:
  && $WM_PROJECT_DIR/wmake/src/Allmake \
- && cd $WM_THIRD_PARTY_DIR \
+ && cd ${OFINSTDIR}/ThirdParty \
  && ./Allwmake 2>&1 | tee log.Allwmake
 
 #...........
