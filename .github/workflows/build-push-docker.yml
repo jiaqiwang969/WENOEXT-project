@@ -4,7 +4,7 @@ with:
   username: ${{ github.repository_owner}}
   password: ${{ secretcs.GHCR_PASSWORD }}
   
--name: Build image
+- name: Build image
   uses: docker/build-push-action@v2
   with:
     tags: ${{ steps.docker_meta.outputs.tags }}
