@@ -1,0 +1,19 @@
+uses: docker/login-action@v1
+with:
+  registry: ghcr.io
+  username: ${{ github.repository_owner}}
+  password: ${{ secretcs.GHCR_PASSWORD }}
+  
+-name: Build image
+  uses: docker/build-push-action@v2
+  with:
+    tags: ${{ steps.docker_meta.outputs.tags }}
+    file: ./Dockerfile
+    
+- name: Push image
+  uses: docker/build-push-action@v2
+  with:
+    push: true
+    tags: ${{ steps.docker_meta.outputs.tags }}
+    file: ./Dockerfile
+    
