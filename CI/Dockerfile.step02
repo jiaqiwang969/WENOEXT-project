@@ -1,4 +1,4 @@
-FROM jiaqiknight/openfoam-wenoext:v1
+FROM ghcr.io/jiaqiwang969/wenoext:main
 
 CMD [ "/bin/sh" ]
 
@@ -13,7 +13,8 @@ ENV foamDotFile="$FOAM_INST_DIR/OpenFOAM-${VERSION}/etc/bashrc"
 RUN mkdir -p $FOAM_INST_DIR/build/
 WORKDIR $FOAM_INST_DIR/build
 # Bundle lib source
-COPY --chown=gitlab:gitlab . .
+COPY --chown=ofuser:ofuser . .
+
 
 # Update git submodules
 #RUN git submodule init && git submodule update
